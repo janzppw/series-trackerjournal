@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Series Tracker Journal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>📺 Series Tracker Journal</h1>
+      <nav>
+        <button id="loginBtn">Login</button>
+        <button id="logoutBtn" style="display: none;">Logout</button>
+      </nav>
+    </header>
+    <section id="authSection">
+  <h2>Login or Register</h2>
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button id="login">Login</button>
+  <button id="register">Register</button>
+</section>
+
+    <main>
+  <section id="addSeries">
+    <h2>Add New Series</h2>
+    <form id="seriesForm">
+      <input type="text" id="seriesName" placeholder="Series Name" required><br>
+      <input type="number" id="episodes" placeholder="Number of Episodes" required><br>
+      <textarea id="description" placeholder="Description" required></textarea><br>
+      <input type="text" id="characters" placeholder="Main Characters" required><br>
+      <textarea id="myComment" placeholder="Your Comment" required></textarea><br>
+      <input type="number" id="rating" placeholder="Your Rating (1-10)" min="1" max="10" required><br>
+      <input type="url" id="imageURL" placeholder="Poster Image URL" required><br>
+      <button type="submit">Add Series</button>
+    </form>
+  </section>
+  <section id="seriesList">
+    <h2>My Series List</h2>
+    <div id="seriesContainer"></div>
+  </section>
+</main>
+</div>
+<script src="script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyAI-PnEh4jWpC2DEbG3WGncYBmFFRQPSPI",
+    authDomain: "series-trackerjournal.firebaseapp.com",
+    projectId: "series-trackerjournal",
+    storageBucket: "series-trackerjournal.appspot.com",
+    messagingSenderId: "429793217700",
+    appId: "1:429793217700:web:7f1a91945e60a67f77aa31"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script>
+
+</body>
+</html>
