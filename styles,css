@@ -1,4 +1,3 @@
-/* 🌸 General Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -6,8 +5,6 @@ body {
   background-color: #ffeef4;
   color: #333;
 }
-
-/* 🌺 Header */
 header {
   background-color: #ff85a2;
   color: white;
@@ -132,9 +129,7 @@ form button:hover {
 .series-card p {
   font-size: 0.95rem;
   margin: 5px 0;
-}
 
-/* ✨ Journal Section (if shown later) */
 #journalSection {
   padding: 1rem 2rem;
   background-color: #ffe0ec;
